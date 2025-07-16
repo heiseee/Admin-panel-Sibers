@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="/css/userStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="user-detail-container">
+        <header>
+            <a href="/admin" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Admin
+            </a>
+            <h1>User Details</h1>
+        </header>
+
+        <div class="user-info">
+            <div id="viewMode">
+                <div class="info-row">
+                    <span class="label">Username:</span>
+                    <span id="username" class="value"></span>
+                </div>
+                <div class="info-row">
+                    <span class="label">First Name:</span>
+                    <span id="firstName" class="value"></span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Last Name:</span>
+                    <span id="lastName" class="value"></span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Gender:</span>
+                    <span id="gender" class="value"></span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Birthdate:</span>
+                    <span id="birthdate" class="value"></span>
+                </div>
+            </div>
+
+            <form id="editForm" class="hidden">
+                <div class="form-group">
+                    <label for="editUsername">Username</label>
+                    <input type="text" id="editUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="editFirstName">First Name</label>
+                    <input type="text" id="editFirstName">
+                </div>
+                <div class="form-group">
+                    <label for="editLastName">Last Name</label>
+                    <input type="text" id="editLastName">
+                </div>
+                <div class="form-group">
+                    <label for="editGender">Gender</label>
+                    <select id="editGender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editBirthdate">Birthdate</label>
+                    <input type="date" id="editBirthdate">
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancelEdit" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="user-actions">
+            <button id="editBtn" class="btn btn-primary">
+                <i class="fas fa-edit"></i> Edit
+            </button>
+            <button id="deleteBtn" class="btn btn-danger">
+                <i class="fas fa-trash"></i> Delete
+            </button>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+    </div>
+
+    <script src="/js/user.js"></script>
+</body>
+</html>
